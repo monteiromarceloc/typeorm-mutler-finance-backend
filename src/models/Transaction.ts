@@ -22,7 +22,9 @@ class Transaction {
 
   @ManyToOne(() => Category)
   @JoinColumn({ name: 'category_id' })
-  category_id: string;
+  category: Category;
+
+  @Column() category_id: string;
 
   @CreateDateColumn() created_at: Date;
 
